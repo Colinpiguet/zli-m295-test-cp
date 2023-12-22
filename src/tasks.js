@@ -2,8 +2,7 @@
 /* eslint-disable no-const-assign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
-//  die untere Zeile macht random id
-const { randomUUID } = require('node:crypto');
+const { randomUUID } = require('node:crypto'); // macht eine zufällige id
 const express = require('express');
 
 const router = express.Router();
@@ -58,4 +57,4 @@ router.delete('/:id', (request, response) => {
   }
 });
 
-module.exports = router;
+module.exports = router; // Exportiert den Router für die Verwendung in anderen Modulen

@@ -1,9 +1,9 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 /* eslint-disable linebreak-style */
-const express = require('express');
+const express = require('express'); // Importiert das Express-Framework
 
-const router = express.Router();
+const router = express.Router(); // Initialisiert einen Express-Router
 
 // POST /login Endpunkt mit Statuscode 200 und bei error 401
 router.post('/login', (request, response) => {
@@ -37,4 +37,4 @@ router.delete('/logout', (request, response) => {
 });
 
 // eslint-disable-next-line linebreak-style
-module.exports = router;
+module.exports = router; // Exportiert den Router für die Verwendung in anderen Modulen
