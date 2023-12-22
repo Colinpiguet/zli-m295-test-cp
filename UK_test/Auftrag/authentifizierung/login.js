@@ -1,5 +1,3 @@
-// npm install express express-session
-
 const express = require('express')
 const session = require('express-session')
 const app = express()
@@ -18,7 +16,7 @@ app.post('/login', function (request, response) {
 		request.session.email = email
 		return response.status(200).json({ email: request.session.email })
 	}
-  return response.status(401).json({ error: "Invalid credentials" })
+  return response.status(401).json({ error: "Ungültige credentials" })
 })
 
 // Server
