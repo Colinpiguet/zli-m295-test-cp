@@ -19,15 +19,27 @@ app.post('/login', function (request, response) {
     request.session.email = email
     return response.status(200).json({ email: request.session.email })
   }
-  return response.status(401).json({ error: 'Invalid credentials' })
+  return response.status(401).json({ error: 'Ungültige credentials' })
 })
 
 // GET /verify Endpunkt mit Statuscode 200 und bei error 401
 app.get('/verify', function (request, response) {
+  // Überprüft ob email eingeloggt ist
 	if (request.session.email) {
 		return response.status(200).json({ email: request.session.email })
 	}
-  return response.status(401).json({ error: "Not logged in" })
+  return response.status(401).json({ error: "Nicht eingeloggt, logge dich zuerst ein" })
+})
+
+// GET /logout Endpunkt mit Statuscode 204 und bei error 401
+app.delete('/logout', function (request, response) {
+	// Überprüft ob email eingeloggt ist
+	if (request.session.email) {
+		// loggt aus
+		request.session.email = null
+		return response.status(200).send("erfolgreich ausgelogged")
+	}
+  return response.status(401).json({ error: "Nicht eingelogged" })
 })
 
 // Server
