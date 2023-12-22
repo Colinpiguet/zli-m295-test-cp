@@ -1,18 +1,8 @@
 const express = require('express')
-const session = require('express-session')
-const app = express()
-const port = 3000;
-
-app.use(express.json())
-app.use(session({
-  secret: 'supersecret',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {}
-}))
+const router = express.Router()
 
 // POST /login Endpunkt mit Statuscode 200 und bei error 401
-app.post('/login', function (request, response) {
+router.post('/login', function (request, response) {
   const { email, password } = request.body
   //Hier wird nur überprüft ob das passwort m295 ist, die email aber nicht, da jede email funtionieren sollte
   if (password === 'm295') {
@@ -23,7 +13,7 @@ app.post('/login', function (request, response) {
 })
 
 // GET /verify Endpunkt mit Statuscode 200 und bei error 401
-app.get('/verify', function (request, response) {
+router.get('/verify', function (request, response) {
   // Überprüft ob email eingeloggt ist
 	if (request.session.email) {
 		return response.status(200).json({ email: request.session.email })
@@ -32,7 +22,7 @@ app.get('/verify', function (request, response) {
 })
 
 // GET /logout Endpunkt mit Statuscode 204 und bei error 401
-app.delete('/logout', function (request, response) {
+router.delete('/logout', function (request, response) {
 	// Überprüft ob email eingeloggt ist
 	if (request.session.email) {
 		// loggt aus
@@ -42,8 +32,4 @@ app.delete('/logout', function (request, response) {
   return response.status(401).json({ error: "Nicht eingelogged" })
 })
 
-// Server
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`)
-})
-  
+module.exports = router;
