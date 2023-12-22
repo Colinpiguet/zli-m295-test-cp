@@ -2,6 +2,7 @@
 /* eslint-disable no-const-assign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
+
 const { randomUUID } = require('node:crypto'); // macht eine zufällige id
 const express = require('express');
 
@@ -11,11 +12,13 @@ const router = express.Router();
 const tasks = [];
 
 // GET /tasks Endpunkt mit get mehtod und mit Statuscode 200
+// Mit Hilfe von anderen eigenen Aufgaben
 router.get('/tasks', (request, response) => {
   response.status(200).json(tasks);
 });
 
 // POST /tasks Endpunkt mit push mehtod und mit Statuscode 201 und einer random id
+// Mit Hilfe von anderen eigenen Aufgaben
 router.post('/tasks', (request, response) => {
   const newTask = { ...request.body, id: randomUUID() };
   tasks.push(newTask);
@@ -23,6 +26,7 @@ router.post('/tasks', (request, response) => {
 });
 
 // GET /tasks/:id Endpunkt mit mit find method und mit Statuscode 200 und bei error 404
+// Mit Hilfe von anderen eigenen Aufgaben
 router.get('/tasks/:id', (request, response) => {
   const task = tasks.find((task) => task.id === request.params.id);
   if (task) {
@@ -33,6 +37,7 @@ router.get('/tasks/:id', (request, response) => {
 });
 
 // PATCH /tasks/:id Endpunkt mit find mehtod und mit Statuscode 200 und bei error 404
+// Mit Hilfe von anderen eigenen Aufgaben
 router.patch('/tasks/:id', (request, response) => {
   const taskId = request.params.id;
   const keys = Object.keys(request.body);
@@ -46,6 +51,7 @@ router.patch('/tasks/:id', (request, response) => {
 });
 
 // DELETE /tasks/:id Endpunkt mit filter mehtod und mit Statuscode 200 und bei error 404
+// Mit Hilfe von anderen eigenen Aufgaben
 router.delete('/:id', (request, response) => {
   // initialTaskLenght überprüft ob die neue task kleiner ist als die alte Task, welche man löschen will !! IDEE VON CHAT GPT !!
   const initialTaskLength = tasks.length;

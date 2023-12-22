@@ -6,6 +6,7 @@ const express = require('express'); // Importiert das Express-Framework
 const router = express.Router(); // Initialisiert einen Express-Router
 
 // POST /login Endpunkt mit Statuscode 200 und bei error 401
+// Mit Hilfe von anderen eigenen Aufgaben und Begeleit Präsentation
 router.post('/login', (request, response) => {
   const { email, password } = request.body;
   // Hier wird nur überprüft ob das passwort m295 ist, die email aber nicht, da jede email funtionieren sollte
@@ -17,6 +18,7 @@ router.post('/login', (request, response) => {
 });
 
 // GET /verify Endpunkt mit Statuscode 200 und bei error 401
+// Mit Hilfe von anderen eigenen Aufgaben und Begeleit Präsentation
 router.get('/verify', (request, response) => {
   // Überprüft ob email eingeloggt ist
   if (request.session.email) {
@@ -26,6 +28,7 @@ router.get('/verify', (request, response) => {
 });
 
 // GET /logout Endpunkt mit Statuscode 204 und bei error 401
+// Mit Hilfe von anderen eigenen Aufgaben und Begeleit Präsentation
 router.delete('/logout', (request, response) => {
   // Überprüft ob email eingeloggt ist
   if (request.session.email) {

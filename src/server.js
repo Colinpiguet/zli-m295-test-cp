@@ -3,6 +3,9 @@
 /* eslint-disable import/extensions */
 /* eslint-disable semi */
 /* eslint-disable max-len */
+
+// Mit begleit Präsentation gemacht
+
 const express = require('express') // Importiert das Express-Framework
 const session = require('express-session') // Importiert das Express-Session-Modul
 
