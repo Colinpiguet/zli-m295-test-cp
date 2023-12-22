@@ -22,6 +22,14 @@ app.post('/login', function (request, response) {
   return response.status(401).json({ error: 'Invalid credentials' })
 })
 
+// GET /verify Endpunkt mit Statuscode 200 und bei error 401
+app.get('/verify', function (request, response) {
+	if (request.session.email) {
+		return response.status(200).json({ email: request.session.email })
+	}
+  return response.status(401).json({ error: "Not logged in" })
+})
+
 // Server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
