@@ -1,3 +1,21 @@
+commit f54438e19b8bc50c57119e62d67d2a738fd287b5
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 15:26:15 2023 +0000
+
+    Made final comments on files
+
+commit f0d22a9942d1a6f3664c2f4dc7e7417fb308fb8e
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 15:21:00 2023 +0000
+
+    made changes on README.md file
+
+commit 9e33992d0cef9b493bb8b645f7a6bf866a25760a
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 15:19:32 2023 +0000
+
+    git log created
+
 commit 34ef69e309208134d9c006d2bedb879815c5aead
 Author: Colinpiguet <piguetcolin@gmail.com>
 Date:   Fri Dec 22 15:17:27 2023 +0000
