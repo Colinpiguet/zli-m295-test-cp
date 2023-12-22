@@ -1,0 +1,101 @@
+commit 34ef69e309208134d9c006d2bedb879815c5aead
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 15:17:27 2023 +0000
+
+    README.md file created
+
+commit 99c71a155864f9d320e015a05327ec84a543984c
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 14:36:56 2023 +0000
+
+    Added the Testing files and commented the whole code
+
+commit 0e3799ead1a564b1e6e1402058e5ade8339219eb
+Author: Colinpiguet <145120321+Colinpiguet@users.noreply.github.com>
+Date:   Fri Dec 22 15:25:12 2023 +0100
+
+    Both testing files from postman as JSON uploaded
+
+commit 8863544ace2fd62c45c80857bcf150dbb80c679a
+Author: Colinpiguet <145120321+Colinpiguet@users.noreply.github.com>
+Date:   Fri Dec 22 15:15:49 2023 +0100
+
+    Create README.md
+
+commit 3b9794b52959e2302a4dd170311bd1f0ebaf657a
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 13:49:08 2023 +0000
+
+    Installed eslint and fixed all problems
+
+commit 2b6fe1c6e5ce672876f821416de96de23428dac7
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 13:42:40 2023 +0000
+
+    Made all in one folder with server.js and also did antoher folder structue
+
+commit ff7ed25df5cc732213740e01bb2d1783ee75b34c
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 13:01:37 2023 +0000
+
+    DELETE /logout successfully created and also tested
+
+commit ccb85b1b8866c0154aaf39383325842312525f0f
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 12:22:51 2023 +0000
+
+    GET /verify endpoit created and succesfully tested
+
+commit 5475953b7db196a5a1ecf18444e81f88b2ee792d
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 12:08:08 2023 +0000
+
+    POST /login enpoint is now working, also tested
+
+commit 393abd0a7292ffca92a6f995a3349db6976a06d2
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 12:47:39 2023 +0100
+
+    changed the login endpoint
+
+commit ed0ee5d1c32fd5c36357503d9bf4d486ba98b719
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 11:44:07 2023 +0100
+
+    created new folder for the next tasks and made the Post/login enpoint, but I am not finished
+
+commit 9a27cdcc5289adedec04c14783a5e146ff2899e8
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 11:25:05 2023 +0100
+
+    had some problems with git, but fixed it
+
+commit d8bb69ca3c908a3f9fa2e5b411bf2f335180a55e
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 10:09:54 2023 +0000
+
+    created the patch and delete enpoints, but the delete is not working till now
+
+commit d4949fa189ecea6b44db1589b7e6d4197cbed388
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 09:22:00 2023 +0000
+
+    GET/ tasks/:id endpoint created
+
+commit bdae4e29981927fc80ff4d09d1decef89d8b2854
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 08:50:06 2023 +0000
+
+    made the Post/tasks endpoint and also installd the eslint
+
+commit 83feb0b7b78e50d809e3946d76ce384d471e4d59
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 08:24:17 2023 +0000
+
+    Tasks.js created, gitignore nodemodules and made the enpoint get tasks
+
+commit 61937a055a5e798a3ef541411be54bb4d7d2e733
+Author: Colinpiguet <piguetcolin@gmail.com>
+Date:   Fri Dec 22 07:46:27 2023 +0000
+
+    created repository and folder
