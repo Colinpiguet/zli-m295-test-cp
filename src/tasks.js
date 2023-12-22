@@ -1,10 +1,12 @@
+/* eslint-disable max-len */
 /* eslint-disable no-const-assign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-shadow */
 //  die untere Zeile macht random id
 const { randomUUID } = require('node:crypto');
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+
+const router = express.Router();
 
 // leerer Array für die Tasks
 const tasks = [];
@@ -52,7 +54,7 @@ router.delete('/:id', (request, response) => {
   if (tasks.length < initialTaskLength) {
     response.status(400).json({ message: 'Löschen nicht möglich.' });
   } else {
-    response.status(200).json(tasks).send("Erfolgreich gelöscht.");
+    response.status(200).json(tasks).send('Erfolgreich gelöscht.');
   }
 });
 

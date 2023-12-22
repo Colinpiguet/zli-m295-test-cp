@@ -1,5 +1,10 @@
+/* eslint-disable no-console */
+/* eslint-disable import/extensions */
+/* eslint-disable semi */
+/* eslint-disable max-len */
 const express = require('express')
 const session = require('express-session')
+
 const app = express()
 const port = 3000;
 
@@ -9,19 +14,18 @@ app.use(session({
   secret: 'supersecret',
   resave: false,
   saveUninitialized: false,
-  cookie: {}
+  cookie: {},
 }))
 
-
 const login = require('./login.js')
+
 app.use('/', login)
 
 const tasks = require('./tasks.js')
-app.use('/', tasks)
 
+app.use('/', tasks)
 
 // Server
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
+  console.log(`Server listening on port ${port}`)
 })
-
